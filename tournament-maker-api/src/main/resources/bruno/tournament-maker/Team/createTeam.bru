@@ -1,0 +1,21 @@
+meta {
+  name: createTeam
+  type: http
+  seq: 2
+}
+
+post {
+  url: https://localhost:8443/api/teams
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "name":"Team 1",
+    "tag":"T1",
+    "creationDate":null  ,
+    "type":"5vs5"
+  }
+  
+}

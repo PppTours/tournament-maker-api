@@ -1,0 +1,21 @@
+meta {
+  name: addInTeam
+  type: http
+  seq: 2
+}
+
+post {
+  url: https://localhost:8443/api/in_teams
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "id": {
+      "id_team" : 1,
+      "id_user" : 1
+    }
+    "owner":false
+  }
+}

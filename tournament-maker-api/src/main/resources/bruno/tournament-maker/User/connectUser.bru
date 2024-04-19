@@ -1,0 +1,18 @@
+meta {
+  name: connectUser
+  type: http
+  seq: 4
+}
+
+post {
+  url: https://localhost:8443/api/users/connect
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "pseudo": "admin",
+    "password": "admin"
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "version": "1",
+  "name": "tournament-maker",
+  "type": "collection",
+  "ignore": [
+    "node_modules",
+    ".git"
+  ],
+  "clientCertificates": {
+    "enabled": true,
+    "certs": [
+      {
+        "domain": "*",
+        "certFilePath": "C:\\Users\\valentin.biard\\Documents\\GitPerso\\tournament-maker\\tournament-maker\\localhost.crt",
+        "keyFilePath": "C:\\Users\\valentin.biard\\Documents\\GitPerso\\tournament-maker\\tournament-maker\\localhost.key",
+        "passphrase": ""
+      }
+    ]
+  }
+}

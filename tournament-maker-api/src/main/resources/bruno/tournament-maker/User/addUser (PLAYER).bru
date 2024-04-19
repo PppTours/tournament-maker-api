@@ -1,0 +1,22 @@
+meta {
+  name: addUser (PLAYER)
+  type: http
+  seq: 2
+}
+
+post {
+  url: https://localhost:8443/api/users
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "pseudo": "player",
+    "firstName": "pla",
+    "lastName": "yer",
+    "idDiscord": "@player",
+    "password": "player",
+    "role": "PLAYER"
+  }
+}

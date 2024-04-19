@@ -5,7 +5,7 @@ meta {
 }
 
 post {
-  url: https://localhost:8443/api/user_teams
+  url: https://localhost:8443/api/user_team
   body: json
   auth: none
 }
@@ -14,8 +14,8 @@ body:json {
   {
     "id": {
       "id_team" : 1,
-      "id_user" : 1
-    }
-    "owner":false
+      "id_user" : 2
+    },
+    "is_owner":false
   }
 }

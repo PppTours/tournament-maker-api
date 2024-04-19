@@ -1,7 +1,7 @@
 package com.ppp.tournamentmaker.controllers;
 
 import com.ppp.tournamentmaker.models.Team;
-import com.ppp.tournamentmaker.repositories.In_TeamRepository;
+import com.ppp.tournamentmaker.repositories.User_TeamRepository;
 import com.ppp.tournamentmaker.repositories.TeamRepository;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -15,11 +15,11 @@ import java.util.Objects;
 @RequestMapping("api/teams")
 public class TeamController {
     private final TeamRepository teamRepository;
-    private final In_TeamRepository in_teamRepository;
+    private final User_TeamRepository user_teamRepository;
 
-    public TeamController(final TeamRepository teamRepository, final In_TeamRepository in_teamRepository) {
+    public TeamController(final TeamRepository teamRepository, final User_TeamRepository user_teamRepository) {
         this.teamRepository = teamRepository;
-        this.in_teamRepository = in_teamRepository;
+        this.user_teamRepository = user_teamRepository;
     }
 
     @GetMapping
@@ -59,7 +59,7 @@ public class TeamController {
     public ResponseEntity<Boolean> isCompleteTeam(@PathVariable final int id_team) {
         Team teamInBDD = teamRepository.getTeam(id_team);
         if(teamInBDD != null){
-            int nbUser = in_teamRepository.countInTeamByIdTeam(teamInBDD.getId_team());
+            int nbUser = user_teamRepository.countInTeamByIdTeam(teamInBDD.getId_team());
             if(Objects.equals(teamInBDD.getType(), "2vs2")){
                 if(nbUser < 2){
                     return new ResponseEntity<>(false, HttpStatus.OK);

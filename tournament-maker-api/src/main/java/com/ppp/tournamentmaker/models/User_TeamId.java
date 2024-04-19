@@ -5,7 +5,7 @@ import jakarta.persistence.Embeddable;
 import java.io.Serializable;
 
 @Embeddable
-public class In_TeamId implements Serializable {
+public class User_TeamId implements Serializable {
     private int id_team;
     private int id_user;
 
